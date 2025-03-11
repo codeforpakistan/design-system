@@ -20,16 +20,44 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: 'Guides',
+          label: 'Get Started',
+    
           items: [
             // Each item here is one entry in the navigation menu.
-            { label: 'Example Guide', slug: 'guides/getting-started' },
+            { label: 'Home', slug: '' },
+
+            { label: 'For Designers', slug: 'get-started/designers' },
+
+            { label: 'For Developers', slug: 'get-started/developers' },
+            
+            
           ],
         },
+
         {
-          label: 'Reference',
-          autogenerate: { directory: 'reference' },
+          label: 'Styles',
+    
+          items: [
+
+
+            { label: 'Typography', slug: 'styles/typography' },
+
+            { label: 'Colors', slug: 'styles/colors' },
+            
+            { label: 'Effects', slug: 'styles/effects' },
+
+            { label: 'Layout', slug: 'styles/layout' },
+
+
+          ],
         },
+
+        // {
+        //   label: 'Auto',
+        //   autogenerate: { directory: 'get-started' },
+        // },
+
+
       ],
       editLink: {
         baseUrl: 'https://github.com/codeforpakistan/design-system/edit/main', 
