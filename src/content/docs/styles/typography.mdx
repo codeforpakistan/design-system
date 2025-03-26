@@ -1,24 +1,178 @@
 ---
 title: Typography
-description: Learn how to put together designs using Digital Design Nizam.
+description: Guidelines on typography.
 ---
 
-Learn how to put together designs using Digital Design Nizam
+import { Code, Tabs, TabItem } from '@astrojs/starlight/components';
 
-## Figma Community File
 
-Download the community file for Digital Design Nizam.
 
-import { LinkCard } from '@astrojs/starlight/components';
 
-<LinkCard title="Open Community File" href="/guides/authoring-content/" />
+Using Tailwind’s type scale with a custom font-family for RTL text (Naskh & Nastaliq)
 
-### How to use
 
-- Open it in a separate file or add your designs directly to copy of the community file.
-- use the 'Assets' panel to browse and search the available components.
-- If you have a paid Figma account, you can also use the community file as a library.
 
-## Installation
 
-1. Clone the repository:
+## Sizing
+
+
+<div class="preview">
+
+    <div class="p-4">
+
+        Preview
+
+        ---
+
+        <p class="text-6xl">Display 6xl</p>
+        <p class="text-5xl">Display 5xl</p>
+        <p class="text-4xl">Display 4xl</p>
+
+        ---
+
+        <p class="text-3xl">Heading 3xl</p>
+        <p class="text-2xl">Heading 2xl</p>
+        <p class="text-xl">Heading xl</p>
+
+        ---
+
+        <p class="text-lg">Body lg</p>
+        <p class="text-base">Body base</p>
+        <p class="text-sm">Body sm</p>
+        <p class="text-xs">Body xs</p>
+
+        ---
+
+    </div>
+
+    <Code code=
+
+        '
+        ---
+
+        <p class="text-6xl">Display 6xl</p>
+        <p class="text-5xl">Display 5xl</p>
+        <p class="text-4xl">Display 4xl</p>
+
+        ---
+
+        <p class="text-3xl">Heading 3xl</p>
+        <p class="text-2xl">Heading 2xl</p>
+        <p class="text-xl">Heading xl</p>
+
+        ---
+
+        <p class="text-lg">Body lg</p>
+        <p class="text-base">Body base</p>
+        <p class="text-sm">Body sm</p>
+        <p class="text-xs">Body xs</p>
+
+        ---
+        '
+
+    />
+
+ </div>
+
+
+## Font Families
+Pick the one appropriate to your designs.
+
+---
+
+### Open Sans
+Sans style, default for most applications.
+
+<div class="preview">
+
+    <div class="p-4">
+
+        Preview
+
+        <div class="text-2xl font-sans">The quick brown fox jumps over the lazy dog. 0123456789 !@#$%^&*() — “A journey of a thousand miles begins with a single step.”</div>
+
+    </div>
+
+    <Code code=
+
+        '
+        <div class="text-2xl font-sans">The quick brown fox jumps over the lazy dog. 0123456789 !@#$%^&*() — “A journey of a thousand miles begins with a single step.”</div>
+        '
+
+    />
+
+ </div>
+
+
+
+### EB Garamound
+Serif style suitable for a more stylized and official feel.
+
+<div class="preview">
+
+    <div class="p-4">
+
+        Preview
+
+        <div class="text-2xl font-serif">The quick brown fox jumps over the lazy dog. 0123456789 !@#$%^&*() — “A journey of a thousand miles begins with a single step.”</div>
+
+    </div>
+
+    <Code code=
+
+        '
+        <div class="text-2xl font-serif">The quick brown fox jumps over the lazy dog. 0123456789 !@#$%^&*() — “A journey of a thousand miles begins with a single step.”</div>
+        '
+
+    />
+
+ </div>
+
+
+### Nafees
+Naskh style recommended for most local languages such as Urdu, Sindhi, Pashto etc for better readability at smaller sizes.
+
+<div class="preview">
+
+    <div class="p-4">
+
+        Preview
+
+        <div class="text-2xl font-naskh text-right">“سُرخ چمگادڑ تیز ہوا میں اُڑتے ہوئے نیلے آسمان کے نیچے جا پہنچا۔ ۰۱۲۳۴۵۶۷۸۹ !@#$%^&*() — “سفر ہزار میل کا ہوتا ہے، مگر پہلا قدم ہی سب سے اہم ہوتا ہے۔”</div>
+
+    </div>
+
+    <Code code=
+
+        '
+        <div class="text-2xl font-naskh text-right">“سُرخ چمگادڑ تیز ہوا میں اُڑتے ہوئے نیلے آسمان کے نیچے جا پہنچا۔ ۰۱۲۳۴۵۶۷۸۹ !@#$%^&*() — “سفر ہزار میل کا ہوتا ہے، مگر پہلا قدم ہی سب سے اہم ہوتا ہے۔”</div>
+        '
+
+    />
+
+ </div>
+
+
+
+### Gulzar
+Nastaliq style for a traditional look in Urdu.
+
+<div class="preview">
+
+    <div class="p-4">
+
+        Preview
+
+        <div class="text-2xl font-nastaliq text-right">“سُرخ چمگادڑ تیز ہوا میں اُڑتے ہوئے نیلے آسمان کے نیچے جا پہنچا۔ ۰۱۲۳۴۵۶۷۸۹ !@#$%^&*() — “سفر ہزار میل کا ہوتا ہے، مگر پہلا قدم ہی سب سے اہم ہوتا ہے۔”</div>
+
+    </div>
+
+    <Code code=
+
+        '
+        <div class="text-2xl font-nastaliq text-right">“سُرخ چمگادڑ تیز ہوا میں اُڑتے ہوئے نیلے آسمان کے نیچے جا پہنچا۔ ۰۱۲۳۴۵۶۷۸۹ !@#$%^&*() — “سفر ہزار میل کا ہوتا ہے، مگر پہلا قدم ہی سب سے اہم ہوتا ہے۔”</div>
+        '
+
+    />
+
+ </div>

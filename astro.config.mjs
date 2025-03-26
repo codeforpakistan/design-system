@@ -11,6 +11,16 @@ export default defineConfig({
     tailwind(),
     starlight({
       title: 'Digital Design Nizam',
+      head: [
+        {
+          tag: 'link',
+          attrs: {
+            href: 'https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gulzar&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap',
+            rel: 'stylesheet',
+          },
+        },
+
+      ],
       logo: {
         light: './src/assets/light-logo.svg',
         dark: './src/assets/dark-logo.svg',
@@ -62,7 +72,11 @@ export default defineConfig({
       editLink: {
         baseUrl: 'https://github.com/codeforpakistan/design-system/edit/main', 
       },
-      customCss: ['./src/tailwind.css'],
+      customCss: [
+        './src/fonts/font-face.css',
+        './src/tailwind.css',
+
+      ],
     }),
   ],
 });

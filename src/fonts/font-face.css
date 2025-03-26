@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Nafees';
+    /* Use a relative path to the local font file in `url()`. */
+    src: url('./nafees-naskh.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }

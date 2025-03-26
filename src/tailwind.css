@@ -6,3 +6,15 @@
 Add additional Tailwind styles to this file, for example with @layer:
 https://tailwindcss.com/docs/adding-custom-styles#using-css-and-layer
 */
+
+
+.preview {
+
+  @apply bg-gray-400/10
+
+}
+
+.text-6xl, .text-5xl, .text-4xl, .text-3xl, .text-2xl, .text-xl 
+{
+  font-variant: small-caps;
+}
