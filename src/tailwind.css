@@ -48,9 +48,7 @@
 }
 
 html, body {
-  font-family: 'Open Sans';
-  color: var(--color-foreground);
-  background: var(--color-background);
+  @apply font-sans bg-background text-foreground
 
 }
 
