@@ -62,6 +62,19 @@ export default defineConfig({
           ],
         },
 
+        {
+          label: 'Guidelines',
+    
+          items: [
+
+
+            { label: 'Common terms in Urdu', slug: 'guidelines/urdu-terms' },
+
+
+
+          ],
+        },
+
         // {
         //   label: 'Auto',
         //   autogenerate: { directory: 'get-started' },

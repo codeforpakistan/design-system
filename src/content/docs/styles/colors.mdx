@@ -1,24 +1,171 @@
 ---
 title: Colors
-description: Learn how to put together designs using Digital Design Nizam.
+description: Learn how to apply colors in your designs.
 ---
 
-Learn how to put together designs using Digital Design Nizam
+## Usage in Figma 
 
-## Figma Community File
+There are 3 default variable modes for colors: User, Default light and Default dark. 
 
-Download the community file for Digital Design Nizam.
+You may customize your theme colors by editing the ‘User’ mode, which is same as the Default light mode. 
+
+All colors include the custom ‘Nizam Green’ color set and stock Tailwind colors.
+
+
+![Variable modes in Figma](/src/assets/color-variables.png)
+
+
+## Usage in Web
+
+### Theme colors
+
+Default values included in the `theme.css` file. To customize, edit the color variables in the `theme.css` file. 
+
+You can use the following theme colors using Tailwind class prefixes of `color-` and `bg-`. RGB values are used instead of Hex values because of limitation of Tailwind 3.4.
+
+Corresponding dark mode values are updated automatically when the attribute of `data-theme="dark"` is applied to the page or `class="dark"` is applied to an element.
+
+
+<div class="bg-surface shadow-lg flex flex-row flex-wrap gap-y-4 not-content p-8">
+
+    <div class="w-1/4">
+        <div class="h-12 w-24 rounded bg-primary shadow"></div>
+        <div class="flex flex-col">
+            <span class="text-base mt-0">Primary</span>
+            <span class="text-sm mt-0">rgb: 0 143 60</span>
+            <code class="text-sm mt-0">class="bg-primary"</code>
+        </div>
+    </div>
+
+    <div class="w-1/4">
+        <div class="h-12 w-24 rounded bg-primary_accent shadow"></div>
+        <div class="flex flex-col">
+            <span class="text-base mt-0">Primary Accent</span>
+            <span class="text-sm mt-0">rgb: 182 231 203</span>
+            <code class="text-sm mt-0">class="bg-primary_accent"</code>
+        </div>
+    </div>
+
+    <div class="w-1/4">
+        <div class="h-12 w-24 rounded bg-secondary shadow"></div>
+        <div class="flex flex-col">
+            <span class="text-base mt-0">Secondary</span>
+            <span class="text-sm mt-0">rgb: 37 99 235</span>
+            <code class="text-sm mt-0">class="bg-secondary"</code>
+        </div>
+    </div>
+
+    <div class="w-1/4">
+        <div class="h-12 w-24 rounded bg-secondary_accent shadow"></div>
+        <div class="flex flex-col">
+            <span class="text-base mt-0">Secondary Accent</span>
+            <span class="text-sm mt-0">rgb: 219 234 254</span>
+            <code class="text-sm mt-0">class="bg-secondary_accent"</code>
+        </div>
+    </div>
+
+    <div class="w-1/4">
+        <div class="h-12 w-24 rounded bg-foreground shadow"></div>
+        <div class="flex flex-col">
+            <span class="text-base mt-0">Foreground</span>
+            <span class="text-sm mt-0">rgb: 24 24 27</span>
+            <code class="text-sm mt-0">class="bg-foreground"</code>
+        </div>
+    </div>
+
+    <div class="w-1/4">
+        <div class="h-12 w-24 rounded bg-background shadow"></div>
+        <div class="flex flex-col">
+            <span class="text-base mt-0">Background</span>
+            <span class="text-sm mt-0">rgb: 250 250 250</span>
+            <code class="text-sm mt-0">class="bg-background"</code>
+        </div>
+    </div>
+
+    <div class="w-1/4">
+        <div class="h-12 w-24 rounded bg-surface shadow"></div>
+        <div class="flex flex-col">
+            <span class="text-base mt-0">Surface</span>
+            <span class="text-sm mt-0">rgb: 255 255 255</span>
+            <code class="text-sm mt-0">class="bg-surface"</code>
+        </div>
+    </div>
+
+    <div class="w-1/4">
+        <div class="h-12 w-24 rounded bg-muted shadow"></div>
+        <div class="flex flex-col">
+            <span class="text-base mt-0">Muted</span>
+            <span class="text-sm mt-0">rgb: 113 113 122</span>
+            <code class="text-sm mt-0">class="bg-muted"</code>
+        </div>
+    </div>
+
+    <div class="w-1/4">
+        <div class="h-12 w-24 rounded bg-success shadow"></div>
+        <div class="flex flex-col">
+            <span class="text-base mt-0">Success</span>
+            <span class="text-sm mt-0">rgb: 0 143 60</span>
+            <code class="text-sm mt-0">class="bg-success"</code>
+        </div>
+    </div>
+
+    <div class="w-1/4">
+        <div class="h-12 w-24 rounded bg-success_accent shadow"></div>
+        <div class="flex flex-col">
+            <span class="text-base mt-0">Success Accent</span>
+            <span class="text-sm mt-0">rgb: 182 231 203</span>
+            <code class="text-sm mt-0">class="bg-success_accent"</code>
+        </div>
+    </div>
+
+    <div class="w-1/4">
+        <div class="h-12 w-24 rounded bg-danger shadow"></div>
+        <div class="flex flex-col">
+            <span class="text-base mt-0">Danger</span>
+            <span class="text-sm mt-0">rgb: 239 68 68</span>
+            <code class="text-sm mt-0">class="bg-danger"</code>
+        </div>
+    </div>
+
+    <div class="w-1/4">
+        <div class="h-12 w-24 rounded bg-danger_accent shadow"></div>
+        <div class="flex flex-col">
+            <span class="text-base mt-0">Danger Accent</span>
+            <span class="text-sm mt-0">rgb: 254 226 226</span>
+            <code class="text-sm mt-0">class="bg-danger_accent"</code>
+        </div>
+    </div>
+
+    <div class="w-1/4">
+        <div class="h-12 w-24 rounded bg-warning shadow"></div>
+        <div class="flex flex-col">
+            <span class="text-base mt-0">Warning</span>
+            <span class="text-sm mt-0">rgb: 249 115 22</span>
+            <code class="text-sm mt-0">class="bg-warning"</code>
+        </div>
+    </div>
+
+    <div class="w-1/4">
+        <div class="h-12 w-24 rounded bg-warning_accent shadow"></div>
+        <div class="flex flex-col">
+            <span class="text-base mt-0">Warning Accent</span>
+            <span class="text-sm mt-0">rgb: 255 237 213</span>
+            <code class="text-sm mt-0">class="bg-warning_accent"</code>
+        </div>
+    </div>
+
+</div>
+
+### When to use which color
+
+- Use Primary and Secondary color for Call-to-Action backgrounds or texts
+
+-  Use accent colors for 
+
+### All colors
+
+You can also use all of Tailwind's stock colors by applying class names such as `bg-blue-500` or `text-red-600`. Visit Tailwind's documentation page on colors to learn more.
 
 import { LinkCard } from '@astrojs/starlight/components';
 
-<LinkCard title="Open Community File" href="/guides/authoring-content/" />
-
-### How to use
-
-- Open it in a separate file or add your designs directly to copy of the community file.
-- use the 'Assets' panel to browse and search the available components.
-- If you have a paid Figma account, you can also use the community file as a library.
-
-## Installation
-
-1. Clone the repository:
+<LinkCard title="Tailwind colors" href="https://v3.tailwindcss.com/docs/customizing-colors"  target="_blank" />

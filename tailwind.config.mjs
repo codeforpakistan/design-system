@@ -9,6 +9,7 @@ const accent = { 50: '#E5F7EE', 100: '#B6E7CB', 200: '#80D5A3', 300: '#55C885', 
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	darkMode: "class",
 	theme: {
 		
 		extend: {
@@ -32,20 +33,21 @@ export default {
 					950: '#002812', 
 				  },
 
-				primary: '#008F3C',
-				primary_accent: '#B6E7CB',
-				secondary: '',
-				secondary_accent: '#008F3C',
-				foreground: '#008F3C',
-				background: '#008F3C',
-				surface: '#008F3C',
-				muted: '#008F3C',
-				success: '#008F3C',
-				success_accent: '#008F3C',
-				danger: '#008F3C',
-				danger_accent: '#008F3C',
-				warning: '#008F3C',
-				warning_accent: '#008F3C',
+				primary: 'rgb(var(--color-primary))',
+				primary_accent: 'rgb(var(--color-primary_accent))',
+				secondary: 'rgb(var(--color-secondary))',
+				secondary_accent: 'rgb(var(--color-secondary_accent))',
+				foreground: 'rgb(var(--color-foreground))',
+				background: 'rgb(var(--color-background))',
+				surface: 'rgb(var(--color-surface))',
+				muted: 'rgb(var(--color-muted))',
+				success: 'rgb(var(--color-success))',
+				success_accent: 'rgb(var(--color-success_accent))',
+				danger: 'rgb(var(--color-danger))',
+				danger_accent: 'rgb(var(--color-danger_accent))',
+				warning: 'rgb(var(--color-warning))',
+				warning_accent: 'rgb(var(--color-warning_accent))',
+
 
 
 			},
