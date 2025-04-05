@@ -1,55 +1,53 @@
-# Starlight Starter Kit: Tailwind
+![Thumbnail for Digital Design Nizam](/public/thumbnail.png)
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+# Welcome to Digital Design Nizam
 
-```
-npm create astro@latest -- --template starlight/tailwind
-```
+All Pakistan Government Digital Design System for Web and Mobile Applications, an open source-design system by Code for Pakistan.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/tailwind)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/tailwind)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/tailwind)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Ftailwind&project-name=my-starlight-docs&repository-name=my-starlight-docs)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## What is Digital Design Nizam
 
-## 🚀 Project Structure
+An open-source design system for creating citizen-centric digital products in Pakistan.
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+A design system is a collection of reusable components, guided by clear standards, that can be combined to build a wide range of applications. For governments, a well-crafted design system ensures consistency, accessibility, and user-friendly digital experiences across all citizen-facing services and platforms.
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-├── tailwind.config.mjs
-└── tsconfig.json
-```
+Digital Design Nizam is designed for designers and developers working on apps, websites, and software for the government, public sector, development sector, and civic tech initiatives.
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+### What makes it unique
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+👈 RTL and local language support built in from the start
 
-Static assets, like favicons, can be placed in the `public/` directory.
+✋ Designed with a focus on accessibility and usability for all
 
-## 🧞 Commands
+🇵🇰 Integrating Pakistani identity into the visual design
 
-All commands are run from the root of the project, from a terminal:
+📱 Powered by TailwindCSS for modern tech stacks
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+🌓 Seamless switching between light and dark mode
 
-## 👀 Want to learn more?
+## About the project
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+At <a href="https://codeforpakistan.org" target="_blank">Code for Pakistan</a>, we are developing a design system that has the potential to become the standard for all digital services in Pakistan. Currently, it is used internally for building digital products for various government departments and the public. We also advocate for its adoption by technology units within the government.
+
+Governments exist to serve their people, and a strong design system helps them do that more effectively.
+
+
+### Contributors
+
+Abdullatif Nizamani, Ahmad Shafiq Zia, Ali Raza, Ammaz Khan, Azeem Abbas, Hassaan Bin Masham, Masna Bin Umeed, Shaji Ahmed, Zeerak Ahmed
+
+To contribute, join our volunteer community at <a href="www.codeforpakistan.org/volunteer" target="_blank">www.codeforpakistan.org/volunteer</a>.
+
+### Acknowledgment
+
+This design system is inspired by and references multiple open sources for its conception. In no particular order, these include:
+
+GOV.UK Design System, TailwindCSS, TailwindCSS Community File by Praveen Juge, Helsinki Design System, Code for America’s Honeycrisp Design System, UAE Design System, Nafees Naskh by Center For Research in Urdu Language Processing (CRULP), Gulzar by Borna Izadpanah, Fiona Ross, Alice Savoie, Simon Cozens.
+
+### Roadmap
+
+1. Code snippets for each component
+2. UX guidelines for each component
+3. More Examples
+4. More Components
+
