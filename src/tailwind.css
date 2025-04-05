@@ -4,6 +4,38 @@
 
 @layer base {
 
+  @font-face {
+    font-family: 'Open Sans';
+    src: url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'EB Garamond';
+    src: url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,300..800;1,300..800&display=swap") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Gulzar';
+    src: url("https://fonts.googleapis.com/css2?family=Gulzar:ital,wght@0,300..800;1,300..800&display=swap") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Nafees';
+    src: url('./nafees-naskh.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
   /* Edit these theme colors to customize */
 
   :root {
@@ -39,18 +71,20 @@
     --color-warning: 249 115 22;
     --color-warning_accent: 124 45 18;
   }
+
+
+  .text-6xl, .text-5xl, .text-4xl, .text-3xl, .text-2xl, .text-xl 
+  {
+    font-variant: small-caps;
+  }
+
+  /* html, body {
+    @apply font-sans bg-background text-foreground
+
+  } */
 }
 
 
-.text-6xl, .text-5xl, .text-4xl, .text-3xl, .text-2xl, .text-xl 
-{
-  font-variant: small-caps;
-}
-
-html, body {
-  @apply font-sans bg-background text-foreground
-
-}
 
 
 td[align="right"] {

@@ -1,17 +1,424 @@
 ---
-title: For Web Developers
-description: Learn how to get started with our documentation site.
+title: For Developers
+description: Get started with implementing Digital Design Nizam for your code.
 ---
 
-Welcome to our documentation! This guide will help you get up and running quickly.
+import { Steps } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
 
-## Prerequisites
 
-Before you begin, make sure you have:
-- Node.js installed (version 16 or higher)
-- npm or yarn package manager
-- Basic familiarity with web development
 
-## Installation
+This guide will help you integrate our design system into your web or mobile applications.
 
-1. Clone the repository:
+<Aside title="Work in progress">
+  Currently Digital Design Nizam only provides styling for development. Web and Mobile components are currently under development and will be available soon.
+</Aside>
+
+
+## Install fonts
+
+You must have the default fonts installed on your system.
+
+**Open Sans** (sans)
+
+https://fonts.google.com/specimen/Open+Sans
+
+**EB Garamond** (sans serif)
+
+https://fonts.google.com/specimen/EB+Garamond
+
+**Nafees** (naskh)
+
+https://urdulabs.com/fonts/nafees-naskh-v2.01
+
+**Gulzar** (nastaliq)
+
+https://fonts.google.com/specimen/Gulzar
+
+
+## Icons
+
+Digital Design Nizam uses the Lucide open-source library for iconography. The default variation uses the 24x24px size at 1.5px stroke width.
+
+import { LinkCard } from '@astrojs/starlight/components';
+
+<LinkCard title="Lucide Installation Guide" href="https://lucide.dev/guide/installation"  target="_blank" />
+
+
+
+## Web Development
+
+Digital Design Nizam is built on top of Tailwind CSS. Follow these steps to set up your project:
+
+### Installation
+
+
+<Steps>
+
+1. Install Tailwind CSS 3.4
+   `https://v3.tailwindcss.com/docs/installation`
+
+2. Update your `tailwind.config.js`
+    ```javascript
+    /** @type {import('tailwindcss').Config} */
+    module.exports = {
+      theme: {
+        extend: {
+          fontFamily: {
+            // Import font families
+            sans: ['"Open Sans"'],
+            serif: ['"EB Garamond"'],
+            nastaliq: ['"Gulzar"'],
+            naskh: ['"Nafees"'],
+          },
+          colors: {
+            // Custom brand color for Pakistani identity
+            nizam_green: {
+              50: '#E5F7EE',
+              100: '#B6E7CB',
+              200: '#80D5A3',
+              300: '#55C885',
+              400: '#2BBA67',
+              500: '#00AC48',
+              600: '#008F3C',
+              700: '#007330',
+              800: '#005126',
+              900: '#01411C',
+              950: '#002812',
+            },
+
+            // Theme colors from theme.css file
+            primary: 'rgb(var(--color-primary))',
+            primary_accent: 'rgb(var(--color-primary_accent))',
+            secondary: 'rgb(var(--color-secondary))',
+            secondary_accent: 'rgb(var(--color-secondary_accent))',
+            foreground: 'rgb(var(--color-foreground))',
+            background: 'rgb(var(--color-background))',
+            surface: 'rgb(var(--color-surface))',
+            muted: 'rgb(var(--color-muted))',
+            success: 'rgb(var(--color-success))',
+            success_accent: 'rgb(var(--color-success_accent))',
+            danger: 'rgb(var(--color-danger))',
+            danger_accent: 'rgb(var(--color-danger_accent))',
+            warning: 'rgb(var(--color-warning))',
+            warning_accent: 'rgb(var(--color-warning_accent))',
+          },
+        },
+      },
+    };
+    ```
+
+3. Create a `theme.css` file and add our custom styles. Note that the `@` tailwind directives will not work if you are applying Tailwind using CDN.
+    ```css
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    @layer base {
+
+      @font-face {
+        font-family: 'Open Sans';
+        src: url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap") format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'EB Garamond';
+        src: url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,300..800;1,300..800&display=swap") format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Gulzar';
+        src: url("https://fonts.googleapis.com/css2?family=Gulzar:ital,wght@0,300..800;1,300..800&display=swap") format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Nafees';
+        src: url('./nafees-naskh.ttf') format('ttf');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      /* Edit these theme colors to customize */
+      :root {
+      --color-primary: 0 143 60;
+      --color-primary_accent: 182 231 203;
+      --color-secondary: 37 99 235;
+      --color-secondary_accent: 219 234 254;
+      --color-foreground: 24 24 27;
+      --color-background: 250 250 250;
+      --color-surface: 255 255 255;
+      --color-muted: 113 113 122;
+      --color-success: 0 143 60;
+      --color-success_accent: 182 231 203;
+      --color-danger: 239 68 68;
+      --color-danger_accent: 254 226 226;
+      --color-warning: 249 115 22;
+      --color-warning_accent: 255 237 213;
+      }
+
+      :root[data-theme~="dark"], :root[class~="dark"], .dark {
+      --color-primary: 0 143 60;
+      --color-primary_accent: 1 65 28;
+      --color-secondary: 59 130 246;
+      --color-secondary_accent: 23 37 84;
+      --color-foreground: 255 255 255;
+      --color-background: 24 24 27;
+      --color-surface: 39 39 42;
+      --color-muted: 161 161 170;
+      --color-success: 0 143 60;
+      --color-success_accent: 1 65 28;
+      --color-danger: 239 68 68;
+      --color-danger_accent: 127 29 29;
+      --color-warning: 249 115 22;
+      --color-warning_accent: 124 45 18;
+      }
+
+      html, body {
+        @apply bg-background text-foreground;
+      }
+
+      .text-6xl, .text-5xl, .text-4xl, .text-3xl, .text-2xl, .text-xl {
+        font-variant: small-caps;
+      }
+    }
+
+    
+    ```
+
+4. Add the `theme.css` file to the `<head>` tag
+   ```html
+   <link href="~/theme.css" rel="stylesheet">
+   ```
+
+</Steps>
+
+### Usage Examples
+
+<div class="preview p-8">
+
+  <div class="max-w-md w-full bg-surface shadow-md not-content text-foreground">
+
+    <div class="w-full h-64">
+      <img src="../../src/assets/landscape.png" alt="Mountain landscape with green hills and clouds" class="w-full h-full object-cover"></img>
+    </div>
+    
+    <div class="p-6 flex flex-col gap-4">
+
+      <p class="text-muted text-sm font-semibold">Over line text</p>
+      
+      <p class="font-semibold">Title goes here</p>
+      
+      <p>Lorem ipsum dolor sit amet, id nulla regione euismod vis, zril gloriatur assueverit ex quo. Ius habemus evertitur id.</p>
+      
+      <div class="flex flex-wrap gap-4">
+
+        <a href="#" class="px-6 py-3 bg-primary text-white font-semibold text-center no-underline">
+          Primary Action
+        </a>
+
+        <a href="#" class="px-6 py-3 bg-zinc-500/10 text-foreground font-semibold text-center border-b-2 border-zinc-500/20 no-underline">
+          Secondary Action
+        </a>
+
+       </div>
+
+    </div>
+
+  </div>
+</div>
+
+```html
+  <div class="max-w-md w-full bg-surface shadow-md text-foreground">
+    <div class="w-full h-64">
+      <img src="../../src/assets/landscape.png" alt="Mountain landscape with green hills and clouds" class="w-full h-full object-cover"></img>
+    </div>
+    <div class="p-6 flex flex-col gap-4">
+      <p class="text-muted text-sm font-semibold">Over line text</p>   
+      <p class="font-semibold">Title goes here</p>
+      <p>Lorem ipsum dolor sit amet, id nulla regione euismod vis, zril gloriatur assueverit ex quo. Ius habemus evertitur id.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#" class="px-6 py-3 bg-primary text-white font-semibold text-center no-underline">
+          Primary Action
+        </a>
+        <a href="#" class="px-6 py-3 bg-zinc-500/10 text-foreground font-semibold text-center border-b-2 border-zinc-500/20 no-underline">
+          Secondary Action
+        </a>
+       </div>
+    </div>
+  </div>
+```
+
+---
+
+## iOS Development
+
+To integrate the design system into your iOS application, follow these steps:
+
+<Steps>
+
+1. Download the required font files (e.g., OpenSans-Regular.ttf, EBGaramond-Regular.ttf).
+    - Add them to your Xcode project by dragging them into the project navigator.
+    - Update your Info.plist file to include the fonts:
+    ```xml
+    <key>UIAppFonts</key>
+    <array>
+        <string>OpenSans-Regular.ttf</string>
+        <string>EBGaramond-Regular.ttf</string>
+        <string>Gulzar-Regular.ttf</string>
+        <string>Nafees-Naskh.ttf</string>
+    </array>
+    ```
+
+2. Add the following to your `Assets.xcassets` file to define custom colors:
+    - Create color sets for `nizam_green`, `primary_accent`, etc.
+    - Use these colors in your SwiftUI or UIKit components.
+
+3. Use SwiftUI to apply consistent styling:
+    ```swift
+    import SwiftUI
+
+    struct ContentView: View {
+        var body: some View {
+            Text("Hello, Nizam!")
+                .font(.custom("OpenSans-Regular", size: 18))
+                .foregroundColor(Color("nizam_green"))
+        }
+    }
+    ```
+
+</Steps>
+
+### Usage Examples
+
+Here’s how you can use the design system in a SwiftUI component:
+
+```swift
+import SwiftUI
+
+struct ButtonView: View {
+    var body: some View {
+        Button(action: {
+            print("Button tapped!")
+        }) {
+            Text("Click Me")
+                .font(.custom("OpenSans-Regular", size: 16))
+                .padding()
+                .background(Color("nizam_green"))
+                .foregroundColor(.white)
+                .cornerRadius(8)
+        }
+    }
+}
+```
+
+---
+
+## Android Development
+
+To integrate the design system into your Android application, follow these steps:
+
+<Steps>
+
+1. Add the required font files (e.g., OpenSans-Regular.ttf, EBGaramond-Regular.ttf) to your `res/font` directory.
+
+2. Define the fonts in your XML styles:
+    ```xml
+    <font-family xmlns:android="http://schemas.android.com/apk/res/android"
+        android:fontProviderAuthority="com.google.android.gms.fonts"
+        android:fontProviderPackage="com.google.android.gms"
+        android:fontProviderQuery="Open Sans"
+        android:fontProviderCerts="@array/com_google_android_gms_fonts_certs" />
+    ```
+
+3. Add custom colors to your `res/values/colors.xml` file:
+    ```xml
+    <color name="nizam_green">#008F3C</color>
+    <color name="primary_accent">#B6E7CB</color>
+    <color name="secondary">#2563EB</color>
+    <color name="secondary_accent">#DBEAFE</color>
+    ```
+
+4. Use the fonts and colors in your XML layouts:
+    ```xml
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello, Nizam!"
+        android:fontFamily="@font/open_sans"
+        android:textColor="@color/nizam_green"
+        android:textSize="18sp" />
+    ```
+
+5. For Jetpack Compose, use the following:
+    ```kotlin
+    @Composable
+    fun Greeting() {
+        Text(
+            text = "Hello, Nizam!",
+            fontFamily = FontFamily(Font(R.font.open_sans)),
+            color = Color(0xFF008F3C),
+            fontSize = 18.sp
+        )
+    }
+    ```
+
+6. Add a custom NizamButton component:
+    ```kotlin
+    @Composable
+    fun NizamButton() {
+        Button(
+            onClick = { println("Button clicked!") },
+            colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFF008F3C)),
+            modifier = Modifier.padding(16.dp)
+        ) {
+            Text(
+                text = "Click Me",
+                fontFamily = FontFamily(Font(R.font.open_sans)),
+                color = Color.White,
+                fontSize = 16.sp
+            )
+        }
+    }
+    ```
+
+</Steps>
+
+### Usage Example
+
+Here’s how you can use the design system in an Android XML layout:
+
+```xml
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Nizam Design System"
+        android:fontFamily="@font/open_sans"
+        android:textColor="@color/nizam_green"
+        android:textSize="24sp"
+        android:paddingBottom="8dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me"
+        android:backgroundTint="@color/nizam_green"
+        android:textColor="@android:color/white" />
+</LinearLayout>
+```
