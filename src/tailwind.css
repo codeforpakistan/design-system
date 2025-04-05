@@ -73,7 +73,7 @@
   }
 
 
-  .text-6xl, .text-5xl, .text-4xl, .text-3xl, .text-2xl, .text-xl 
+  .text-6xl.font-serif, .text-5xl.font-serif, .text-4xl.font-serif, .text-3xl.font-serif, .text-2xl.font-serif, .text-xl.font-serif 
   {
     font-variant: small-caps;
   }
