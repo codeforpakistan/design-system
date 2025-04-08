@@ -36,39 +36,70 @@ export default defineConfig({
             // Each item here is one entry in the navigation menu.
             { label: 'Home', slug: '' },
 
-            { label: 'For Designers', slug: 'get-started/designers' },
+            { label: 'For designers', slug: 'get-started/designers' },
 
-            { label: 'For Developers', slug: 'get-started/developers' },
+            { label: 'For developers', slug: 'get-started/developers' },
             
             
           ],
         },
 
         {
-          label: 'Styles',
+          label: 'Typography',
     
           items: [
 
 
-            { label: 'Typography', slug: 'styles/typography' },
+            { label: 'Sizing', slug: 'typography/sizing' },
 
-            { label: 'Colors', slug: 'styles/colors' },
-            
-            { label: 'Effects', slug: 'styles/effects' },
+            { label: 'Font families', slug: 'typography/font-families' },
 
-            { label: 'Layout', slug: 'styles/layout' },
+
+
+          ],
+        },
+
+
+        {
+          label: 'Colors',
+    
+          items: [
+
+            { label: 'Theme tokens', slug: 'colors/tokens' },
+
+            { label: 'Nizam Green', slug: 'colors/nizam-green' },
+
+            { label: 'Usage instructions', slug: 'colors/usage' },
 
 
           ],
         },
 
         {
-          label: 'Guidelines',
+          label: 'Layout',
     
           items: [
 
 
-            { label: 'Common terms in Urdu', slug: 'guidelines/urdu-terms' },
+            { label: 'Break points', slug: 'layout/breakpoints' },
+
+            { label: 'Containers', slug: 'layout/containers' },
+
+            { label: 'Responsive content layout', slug: 'layout/content-layout' },
+
+            { label: 'Right-to-left direction', slug: 'layout/rtl' },
+        
+
+          ],
+        },
+
+        {
+          label: 'Content',
+    
+          items: [
+
+
+            { label: 'Common terms in Urdu', slug: 'content/urdu-terms' },
 
 
 

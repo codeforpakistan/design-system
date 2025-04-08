@@ -1,0 +1,29 @@
+---
+title: Responsive content layout
+description: Guidelines on responsive content layout.
+tableOfContents: false
+
+---
+
+Digital Design Nizam does not advocate for using rigid grid systems, such as a 12-column grid, for layout design. 
+
+Instead, it recommends splitting layouts into flexible fractions like 1/2, 1/3, 1/4 etc. This approach ensures that the design remains responsive and adapts predictably to different screen sizes.
+
+Additionally, components like avatars, buttons, and similar elements should fit their respective content rather than filling the available space. 
+
+
+<div class="preview p-8 not-content">
+
+    <div class="flex gap-4">
+        <div class="w-1/4 bg-background shadow-md text-foreground text-center p-8">Column 1</div>
+        <div class="w-3/4 bg-background shadow-md text-foreground text-center p-8">Column 2</div>
+    </div>
+
+</div>
+
+```html
+<div class="flex gap-4">
+    <div class="w-1/4 bg-background shadow-md text-foreground text-center p-8">Column 1</div>
+    <div class="w-3/4 bg-background shadow-md text-foreground text-center p-8">Column 2</div>
+</div>
+```

@@ -1,19 +1,20 @@
 ---
-title: For Developers
+title: For developers
 description: Get started with implementing Digital Design Nizam for your code.
+tableOfContents: false
+
 ---
 
 import { Steps } from '@astrojs/starlight/components';
-import { Aside } from '@astrojs/starlight/components';
 
 
+This guide will help you integrate our design system into your web or mobile applications. 
 
-This guide will help you integrate our design system into your web or mobile applications.
+Digital Design Nizam is built on top of Tailwind CSS, and we recommend using it for web development. For mobile development, we provide guidelines for both iOS and Android platforms.
 
-<Aside title="Work in progress">
-  Currently Digital Design Nizam only provides styling for development. Web and Mobile components are currently under development and will be available soon.
-</Aside>
-
+:::note[Work in progress]
+Currently Digital Design Nizam only provides styling for development. Web and Mobile components are currently under development and will be available soon.
+:::
 
 ## Install fonts
 
@@ -60,6 +61,8 @@ Digital Design Nizam is built on top of Tailwind CSS. Follow these steps to set 
 
 2. Update your `tailwind.config.js`
     ```javascript
+    // tailwind.config.js
+
     /** @type {import('tailwindcss').Config} */
     module.exports = {
       theme: {
@@ -110,6 +113,8 @@ Digital Design Nizam is built on top of Tailwind CSS. Follow these steps to set 
 
 3. Create a `theme.css` file and add our custom styles. Note that the `@` tailwind directives will not work if you are applying Tailwind using CDN.
     ```css
+    // theme.css
+
     @tailwind base;
     @tailwind components;
     @tailwind utilities;

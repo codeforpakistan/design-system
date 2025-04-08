@@ -15,7 +15,7 @@ Digital Design Nizam is designed for designers and developers working on apps, w
 
 ### What makes it unique
 
-👈 RTL and local language support built in from the start
+👈 Right-to-left and local language support built in from the start
 
 ✋ Designed with a focus on accessibility and usability for all
 

@@ -1,0 +1,68 @@
+---
+title: Right-to-left direction
+description: This page provides guidelines and best practices for implementing right-to-left (RTL) direction in design systems, ensuring proper layout, alignment, and natural flow for RTL users.
+tableOfContents: false
+
+---
+
+When switching designs from left-to-right (LTR) to right-to-left (RTL), it is not sufficient to simply align text to the right. 
+
+The entire layout of the page must shift to flow from right to left. This includes reversing the direction of components, such as navigation menus, sidebars, and content alignment. 
+
+Additionally, transitions and animations should also switch direction to maintain a natural flow for RTL users. 
+
+<div class="preview p-8">
+
+    Example of the same card element as above, but in RTL direction using the `dir="rtl"` attribute.
+
+  <div dir="rtl" class="w-full bg-surface shadow-md not-content text-foreground flex flex-col md:flex-row">
+
+    <div class="w-full min-h-64">
+      <img src="/landscape.png" alt="Mountain landscape with green hills and clouds" class="w-full h-full object-cover"></img>
+    </div>
+    
+    <div class="p-6 flex flex-col gap-4">
+
+      <p class="text-muted text-sm font-semibold">Over line text</p>
+      
+      <p class="font-semibold">Title goes here</p>
+      
+      <p>Lorem ipsum dolor sit amet, id nulla regione euismod vis, zril gloriatur assueverit ex quo. Ius habemus evertitur id.</p>
+      
+      <div class="flex flex-wrap gap-4">
+
+        <a href="#" class="px-6 py-3 bg-primary text-white font-semibold text-center no-underline">
+          Get Started
+        </a>
+
+        <a href="#" class="px-6 py-3 bg-zinc-500/10 text-foreground font-semibold text-center border-b-2 border-zinc-500/20 no-underline">
+          Learn More
+        </a>
+
+       </div>
+
+    </div>
+
+  </div>
+</div>
+
+```html
+<div dir="rtl" class="flex flex-col md:flex-row w-full bg-surface shadow-md text-foreground">
+    <div class="w-full min-h-64">
+      <img src="/landscape.png" alt="Mountain landscape with green hills and clouds" class="w-full h-full object-cover">
+    </div>    
+    <div class="p-6 flex flex-col gap-4">
+      <p class="text-muted text-sm font-semibold">Over line text</p>
+      <p class="font-semibold">Title goes here</p>      
+      <p>Lorem ipsum dolor sit amet, id nulla regione euismod vis, zril gloriatur assueverit ex quo. Ius habemus evertitur id.</p>      
+      <div class="flex flex-wrap gap-4">
+        <a href="#" class="px-6 py-3 bg-primary text-white font-semibold text-center no-underline">
+          Get Started
+        </a>
+        <a href="#" class="px-6 py-3 bg-zinc-500/10 text-foreground font-semibold text-center border-b-2 border-zinc-500/20 no-underline">
+          Learn More
+        </a>
+       </div>
+    </div>
+  </div>
+```

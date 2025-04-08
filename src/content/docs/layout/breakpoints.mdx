@@ -1,0 +1,74 @@
+---
+title: Breakpoints
+description: Breakpoints for responsive design.
+tableOfContents: false
+
+---
+
+Digital Design Nizam uses the default Tailwind breakpoints to ensure responsive design across various screen sizes. 
+
+These breakpoints include 
+- sm (640px)
+- md (768px)
+- lg (1024px)
+- xl (1280px)
+=2xl (1536px)
+
+When designing layouts, it is recommended to focus on the `sm` (640px) breakpoint as a key transition point. This is because layout directions often change at this size, such as switching from rows to columns or vice versa. 
+
+
+<div class="preview p-8">
+
+    Resize your browser window to see how the layout changes at the sm breakpoint.
+
+  <div class="w-full bg-surface shadow-md not-content text-foreground flex flex-col md:flex-row">
+
+    <div class="w-full min-h-64">
+      <img src="/landscape.png" alt="Mountain landscape with green hills and clouds" class="w-full h-full object-cover"></img>
+    </div>
+    
+    <div class="p-6 flex flex-col gap-4">
+
+      <p class="text-muted text-sm font-semibold">Over line text</p>
+      
+      <p class="font-semibold">Title goes here</p>
+      
+      <p>Lorem ipsum dolor sit amet, id nulla regione euismod vis, zril gloriatur assueverit ex quo. Ius habemus evertitur id.</p>
+      
+      <div class="flex flex-wrap gap-4">
+
+        <a href="#" class="px-6 py-3 bg-primary text-white font-semibold text-center no-underline">
+          Get Started
+        </a>
+
+        <a href="#" class="px-6 py-3 bg-zinc-500/10 text-foreground font-semibold text-center border-b-2 border-zinc-500/20 no-underline">
+          Learn More
+        </a>
+
+       </div>
+
+    </div>
+
+  </div>
+</div>
+
+```html "flex-col md:flex-row"
+<div class="flex flex-col md:flex-row w-full bg-surface shadow-md text-foreground">
+    <div class="w-full min-h-64">
+      <img src="/landscape.png" alt="Mountain landscape with green hills and clouds" class="w-full h-full object-cover">
+    </div>    
+    <div class="p-6 flex flex-col gap-4">
+      <p class="text-muted text-sm font-semibold">Over line text</p>
+      <p class="font-semibold">Title goes here</p>      
+      <p>Lorem ipsum dolor sit amet, id nulla regione euismod vis, zril gloriatur assueverit ex quo. Ius habemus evertitur id.</p>      
+      <div class="flex flex-wrap gap-4">
+        <a href="#" class="px-6 py-3 bg-primary text-white font-semibold text-center no-underline">
+          Get Started
+        </a>
+        <a href="#" class="px-6 py-3 bg-zinc-500/10 text-foreground font-semibold text-center border-b-2 border-zinc-500/20 no-underline">
+          Learn More
+        </a>
+       </div>
+    </div>
+  </div>
+```

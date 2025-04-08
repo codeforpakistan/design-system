@@ -1,86 +1,15 @@
 ---
-title: Typography
-description: Guidelines on typography.
+title: Font families
+description: Pick the one appropriate to your designs.
+tableOfContents: false
+
 ---
 
 import { Code, Tabs, TabItem } from '@astrojs/starlight/components';
 
+Sans and Serif font families with a custom ones for RTL text (Naskh & Nastaliq). You may use any font of your choice by updating the corresponding token in Figma variables or the fontFamily in Tailwind config.
 
-
-
-Using Tailwind’s type scale with a custom font-family for RTL text (Naskh & Nastaliq)
-
-
-
-
-## Sizing
-
-
-<div class="preview">
-
-    <div class="p-4">
-
-        Preview
-
-        ---
-
-        <p class="text-6xl">Display 6xl</p>
-        <p class="text-5xl">Display 5xl</p>
-        <p class="text-4xl">Display 4xl</p>
-
-        ---
-
-        <p class="text-3xl">Heading 3xl</p>
-        <p class="text-2xl">Heading 2xl</p>
-        <p class="text-xl">Heading xl</p>
-
-        ---
-
-        <p class="text-lg">Body lg</p>
-        <p class="text-base">Body base</p>
-        <p class="text-sm">Body sm</p>
-        <p class="text-xs">Body xs</p>
-
-        ---
-
-    </div>
-
-    <Code code=
-
-        '
-        ---
-
-        <p class="text-6xl">Display 6xl</p>
-        <p class="text-5xl">Display 5xl</p>
-        <p class="text-4xl">Display 4xl</p>
-
-        ---
-
-        <p class="text-3xl">Heading 3xl</p>
-        <p class="text-2xl">Heading 2xl</p>
-        <p class="text-xl">Heading xl</p>
-
-        ---
-
-        <p class="text-lg">Body lg</p>
-        <p class="text-base">Body base</p>
-        <p class="text-sm">Body sm</p>
-        <p class="text-xs">Body xs</p>
-
-        ---
-        '
-
-    />
-
- </div>
-
-
-## Font Families
-Pick the one appropriate to your designs.
-
----
-
-### Open Sans
+## Open Sans
 Sans style, default for most applications.
 
 <div class="preview">
@@ -105,7 +34,7 @@ Sans style, default for most applications.
 
 
 
-### EB Garamound
+## EB Garamound
 Serif style suitable for a more stylized and official feel.
 
 <div class="preview">
@@ -129,7 +58,7 @@ Serif style suitable for a more stylized and official feel.
  </div>
 
 
-### Nafees
+## Nafees
 Naskh style recommended for most local languages such as Urdu, Sindhi, Pashto etc for better readability at smaller sizes.
 
 <div class="preview">
@@ -154,7 +83,7 @@ Naskh style recommended for most local languages such as Urdu, Sindhi, Pashto et
 
 
 
-### Gulzar
+## Gulzar
 Nastaliq style for a traditional look in Urdu.
 
 <div class="preview">
