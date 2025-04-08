@@ -18,7 +18,7 @@ Currently Digital Design Nizam only provides styling for development. Web and Mo
 
 ## Install fonts
 
-You must have the default fonts installed on your system.
+You must have the default fonts installed on your system. The 3 Google fonts are imported in the `theme.css` file, while one font (Nafees) is a custom font that you need to download and install separately.
 
 **Open Sans** (sans)
 
@@ -121,29 +121,7 @@ Digital Design Nizam is built on top of Tailwind CSS. Follow these steps to set 
 
     @layer base {
 
-      @font-face {
-        font-family: 'Open Sans';
-        src: url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap") format('woff2');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: 'EB Garamond';
-        src: url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,300..800;1,300..800&display=swap") format('woff2');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: 'Gulzar';
-        src: url("https://fonts.googleapis.com/css2?family=Gulzar:ital,wght@0,300..800;1,300..800&display=swap") format('woff2');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-      }
+      @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gulzar&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
       @font-face {
         font-family: 'Nafees';

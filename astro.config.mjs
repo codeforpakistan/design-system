@@ -82,7 +82,7 @@ export default defineConfig({
           items: [
 
 
-            { label: 'Break points', slug: 'layout/breakpoints' },
+            { label: 'Breakpoints', slug: 'layout/breakpoints' },
 
             { label: 'Containers', slug: 'layout/containers' },
 
