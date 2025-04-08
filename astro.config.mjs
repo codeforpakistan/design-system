@@ -27,6 +27,7 @@ export default defineConfig({
       },
       social: {
         github: 'https://github.com/codeforpakistan/design-system',
+        
       },
       sidebar: [
         {
@@ -120,6 +121,15 @@ export default defineConfig({
         './src/fonts/font-face.css',
         './src/tailwind.css',
 
+      ],
+      head: [
+        {
+          tag: 'meta',
+          attrs: {
+            'property': 'og:image',            
+            content: 'https://nizam.codeforpakistan.org/thumbnail.png',
+          },
+        },
       ],
     }),
   ],
