@@ -130,6 +130,20 @@ export default defineConfig({
             content: 'https://nizam.codeforpakistan.org/thumbnail.png',
           },
         },
+        {
+          tag: 'script',
+          attrs: {
+            async: true,
+            src: 'https://www.googletagmanager.com/gtag/js?id=G-4KH9L9JV6J',
+          },
+        },
+        {
+          tag: 'script',
+          attrs: {            
+            src: './src/gtag.js',
+          },
+        },
+        
       ],
     }),
   ],
