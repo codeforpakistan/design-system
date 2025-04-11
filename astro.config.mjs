@@ -103,9 +103,22 @@ export default defineConfig({
             { label: 'Common terms in Urdu', slug: 'content/urdu-terms' },
 
 
+          ],
+        },
+        
+
+        {
+          label: 'Components',
+    
+          items: [
+
+
+            { label: 'All components', slug: 'components/all-components' },
+
 
           ],
         },
+
 
         // {
         //   label: 'Auto',
