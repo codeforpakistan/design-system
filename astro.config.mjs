@@ -153,7 +153,7 @@ export default defineConfig({
         {
           tag: 'script',
           attrs: {            
-            src: 'gtag.js',
+            src: '/gtag.js',
           },
         },
         
